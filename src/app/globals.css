@@ -1,5 +1,5 @@
 :root{
-  --colordark : #9e6ab5;
+  --colordark : #106e5a;
 }
 
 
@@ -12,7 +12,7 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 .sidenav{
@@ -26,6 +26,8 @@ body {
   justify-content: space-around;
   z-index: 8;
   padding: 5rem 0rem ;
+  margin-left: 0vw;
+  transition: all 1s;
 }
 .nav_item{
   height: 12vh;
@@ -49,11 +51,28 @@ body {
 
 .hamburger svg{
   position: absolute;
-  top: 0px;
+  top: 5px;
+  left: 5px;
   aspect-ratio: 1/1;
   padding: 0.4rem;
   z-index: 10;
   display: block;
-  
+  transition: all 1s;
 }
+
+svg line {
+  transition: all 500ms; 
+  transform-origin: center;
+}
+svg:hover .line1 {
+  transform: translateY(25%);
+  rotate: 45deg;
+}
+svg:hover .line3 {
+  transform: translateY(-25%);
+  rotate: -45deg;
+} 
+svg:hover .line2 {
+  opacity: 0;
+} 
 
