@@ -1,15 +1,17 @@
 'use client';
 import Sidenav from '../component/sidenav'
+import Image from 'next/image';
+// import myphoto from '../../public/photos/myphoto.png'
 
-import { useState } from "react";
 
 export default function Home() {
   
-  const [navHeight, setNavHeight] = useState("");
   return (
       <>
       <Sidenav/>
-       hello home
+       <div className="container">
+        {/* <img src={myphoto.src} alt="Picture of the author" className="myphoto"></img>  */}
+       </div>
       </>
   )
 }

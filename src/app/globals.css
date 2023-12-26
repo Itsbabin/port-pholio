@@ -25,21 +25,20 @@ body {
   align-items: center;
   justify-content: space-around;
   z-index: 8;
-  padding: 5rem 0rem ;
+  padding: 8em 0rem ;
   margin-left: 0vw;
   transition: all 1s;
 }
 .nav_item{
-  height: 12vh;
-  /* background-color: aqua; */
+  height: 10vh;
   text-align: center;
   font-weight: 700;
-  font-size: 4em;
+  font-size: 2.5em;
   color: #ffffff;
   padding-inline: 0.3rem;
   overflow:visible;
   transition: all;
-  transition-duration: 400ms;
+  transition-duration: 4s;
  
 }
 .nextlink{
@@ -47,6 +46,17 @@ body {
 }
 .nav_item:hover{
   border-bottom: #ffffff solid 5px;
+}
+
+.nav_item:hover::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background-color: aliceblue ;
+  rotate: 90deg;
+  /* transform: translateX(20px); */
+  /* transform: translateY(0px); */
 }
 
 .hamburger svg{
@@ -59,6 +69,7 @@ body {
   display: block;
   transition: all 1s;
 }
+
 
 svg line {
   transition: all 500ms; 
@@ -76,3 +87,13 @@ svg:hover .line2 {
   opacity: 0;
 } 
 
+.container{
+  height: 100vh;
+  background-color: black;
+}
+
+
+.myphoto{
+  height: 500px;
+  width: 500px;
+}
