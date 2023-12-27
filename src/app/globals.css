@@ -17,7 +17,7 @@ body {
 
 .sidenav{
   position: absolute;
-  background-color: var(--colordark) ;
+  background-image: linear-gradient(rgb(70, 32, 158) 70%,rgb(157, 50, 181));
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -27,7 +27,8 @@ body {
   z-index: 8;
   padding: 8em 0rem ;
   margin-left: 0vw;
-  transition: all 1s;
+  transition: all 700ms;
+  opacity: 0.95;
 }
 .nav_item{
   height: 10vh;
@@ -37,30 +38,32 @@ body {
   color: #ffffff;
   padding-inline: 0.3rem;
   overflow:visible;
-  transition: all;
-  transition-duration: 4s;
- 
+  transition: height;
+  transition-duration: 400ms;
 }
 .nextlink{
   text-decoration: none;
 }
-.nav_item:hover{
-  border-bottom: #ffffff solid 5px;
+.nav_item::after{
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0%;
+  opacity: 1;
+  transform: translateX(-50%);
+  background-color: aliceblue ; 
+  transition: all 400ms;
 }
 
 .nav_item:hover::after{
   content: "";
   position: absolute;
-  height: 100%;
-  width: 5px;
-  background-color: aliceblue ;
-  rotate: 90deg;
-  /* transform: translateX(20px); */
-  /* transform: translateY(0px); */
+  width: 160px;
+  opacity: 1;
 }
 
 .hamburger svg{
-  position: absolute;
+  position: fixed;
   top: 5px;
   left: 5px;
   aspect-ratio: 1/1;
@@ -70,30 +73,135 @@ body {
   transition: all 1s;
 }
 
-
-svg line {
-  transition: all 500ms; 
+.hamburger[aria-expanded="true"] svg line {
+  transition: all 400ms; 
   transform-origin: center;
 }
-svg:hover .line1 {
+.hamburger[aria-expanded="false"] svg line {
+  transition: all 400ms; 
+  transform-origin: center;
+}
+.hamburger[aria-expanded="true"] svg .line1 {
   transform: translateY(25%);
   rotate: 45deg;
 }
-svg:hover .line3 {
+svg:hover .line1 {
+  transform: translateY(8%);
+}
+.hamburger[aria-expanded="true"] svg .line3 {
   transform: translateY(-25%);
   rotate: -45deg;
 } 
-svg:hover .line2 {
+.hamburger[aria-expanded="true"] svg:hover .line3 {
+  rotate: -55deg;
+} 
+.hamburger[aria-expanded="true"] svg:hover .line1 {
+  rotate: 55deg;
+} 
+svg:hover .line3 {
+  transform: translateY(-8%);
+} 
+.hamburger[aria-expanded="true"] svg .line2 {
   opacity: 0;
 } 
 
 .container{
+  overflow: hidden;
   height: 100vh;
+  padding: 50px 20px;
+  color: #ffffff;
   background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 5;
 }
 
+.image{
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.9;
+}
 
-.myphoto{
-  height: 500px;
-  width: 500px;
+.image .photo {
+  border-radius: 50%;
+  transition: all ease-in 500ms;
+}
+
+.photo:hover{
+  outline: #ffffff 8px solid ;
+}
+
+.intro{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow: visible;
+  height: 40vh;
+  width: max(50vw,300px);
+  z-index: 5;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* @media only screen and (max-width: 700px)  {
+    .intro{
+      width: 70vw;
+    }
+} */
+
+#wave{
+  position: fixed;
+  bottom: -20px;
+  opacity: 0.5;
+  z-index: 1;
+  filter: blur(3px);
+}
+
+.contact_icon svg{
+  fill: #ffffff;
+  height: 60px;
+  width: 60px;
+  transition: all 600ms;
+}
+
+.contact_icon .facebook:hover{
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: #0866FF;
+}
+.contact_icon .linkedin:hover{
+  border-radius: 10px;
+  background-color: #ffffff;
+  fill: #0a66c2;
+}
+.contact_icon .insta:hover{
+  border-radius: 20px;
+  background-color: #ffffff;
+  fill: url(#a);
+}
+.contact_icon .github:hover{
+  border-radius: 50%;
+  background-color: #ffffff;
+  fill: black;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.contact_icons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
 }
