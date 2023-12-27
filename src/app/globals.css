@@ -108,14 +108,23 @@ svg:hover .line3 {
 .container{
   overflow: hidden;
   height: 100vh;
-  padding: 50px 20px;
   color: #ffffff;
   background-color: black;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+}
+
+.wraper{
+  height: 90vh;
+  width: max(65vw , 500px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
-  z-index: 5;
+  gap: 1rem;
+  z-index: 4;
 }
 
 .image{
@@ -138,20 +147,16 @@ svg:hover .line3 {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-direction: column;
-  overflow: visible;
+  overflow: auto;
   height: 40vh;
   width: max(50vw,300px);
   z-index: 5;
   margin-bottom: 1rem;
   text-align: center;
+  flex-wrap: wrap;
+  padding-bottom: 2em;
 }
 
-/* @media only screen and (max-width: 700px)  {
-    .intro{
-      width: 70vw;
-    }
-} */
 
 #wave{
   position: fixed;
@@ -204,4 +209,24 @@ svg:hover .line3 {
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
+}
+
+.skills{
+  margin: 50px 0px;
+}
+
+.left , .right {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  stroke: #ffffff91;
+  margin: 48vh 0px;
+  opacity: 0.5;
+}
+
+.right{
+  right: 5px;
+}
+.left{
+  left: 5px;
 }
