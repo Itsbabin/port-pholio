@@ -86,7 +86,7 @@ body {
   rotate: 45deg;
 }
 svg:hover .line1 {
-  transform: translateY(8%);
+  transform: translateY(-8%);
 }
 .hamburger[aria-expanded="true"] svg .line3 {
   transform: translateY(-25%);
@@ -99,7 +99,7 @@ svg:hover .line1 {
   rotate: 55deg;
 } 
 svg:hover .line3 {
-  transform: translateY(-8%);
+  transform: translateY(8%);
 } 
 .hamburger[aria-expanded="true"] svg .line2 {
   opacity: 0;
@@ -221,12 +221,47 @@ svg:hover .line3 {
   position: absolute;
   stroke: #ffffff91;
   margin: 48vh 0px;
-  opacity: 0.5;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .right{
-  right: 5px;
+  right: 20px;
 }
+
+.left::after{
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 25px;
+  color: #ffffff;
+  text-align: center;
+  transform: translate(0px,-45px);
+  transition: all 400ms;
+}
+
+.left:hover::after{
+  content: "content";
+  transform: translate(40px,-45px);
+  width: 70px;
+}
+
+.left .up{
+  transition: all 400ms;
+}
+.left .down{
+  transition: all 400ms;
+}
+.left:hover .up{
+  transform-origin: left;
+  rotate: 20deg;
+}
+.left:hover .down{
+  transform: translateY(1px);
+  transform-origin: left;
+  rotate: -20deg;
+}
+
 .left{
-  left: 5px;
+  left: 20px;
 }
