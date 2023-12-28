@@ -1,6 +1,7 @@
 import Card from "@/component/skill_card";
 import React from "react";
 import Sidenav from "../../component/sidenav";
+import Animation from "@/component/animation";
 
 export default function Skills() {
   const list = [
@@ -14,6 +15,7 @@ export default function Skills() {
   ];
   return (
     <>
+    <Animation/>
     <Sidenav />
       <div className="container">
         <div className="skill_container">

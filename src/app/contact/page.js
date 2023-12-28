@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Sidenav from "../../component/sidenav";
+import Animation from "@/component/animation";
 
 export default function Contact() {
   return (
     <>
+    <Animation/>
     <Sidenav />
       <div className="container">
         <div className="contact">

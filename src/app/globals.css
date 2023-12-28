@@ -118,9 +118,10 @@ svg:hover .line3 {
 
 .wraper{
   height: 90vh;
-  width: max(65vw , 500px);
+  width: max(65vw , 300px);
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
   align-items: center;
   justify-content: space-around;
   gap: 1rem;
@@ -139,22 +140,17 @@ svg:hover .line3 {
   transition: all ease-in 500ms;
 }
 
-.photo:hover{
-  outline: #ffffff 8px solid ;
-}
-
 .intro{
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: start;
+  justify-content: space-around;
   overflow: auto;
-  height: 40vh;
+  height: 30vh;
   width: max(50vw,300px);
   z-index: 5;
-  margin-bottom: 1rem;
   text-align: center;
   flex-wrap: wrap;
-  padding-bottom: 2em;
+  margin-top: -180px;
 }
 
 
@@ -234,11 +230,11 @@ svg:hover .line3 {
 }
 
 .left .navigate{
-  transform: translate(-50px,27px);
+  transform: translate(-50px,30px);
   transition: all 400ms;
 }
 .left:hover .navigate{
-  transform: translate(-20px,27px);
+  transform: translate(-20px,30px);
   width: 90px;
 
 }
@@ -257,18 +253,19 @@ svg:hover .line3 {
   transform-origin: left;
 }
 .left:hover .up{
-  rotate: 20deg;
+  transform: translate(0px ,-1px);
+  rotate: 30deg;
 }
 .left:hover .down{
-  transform: translateY(1px);
-  rotate: -20deg;
-}
+  transform: translate(-1px,0px);
+  rotate: -30deg;
+} 
 .right .up{
   transform-origin: right;
   transition: all 400ms;
 }
 .right:hover .up{
-  rotate: 20deg;
+  rotate: 25deg;
   transform: translateY(4px);
 }
 .right .down{
@@ -276,8 +273,8 @@ svg:hover .line3 {
   transform-origin: right;
 }
 .right:hover .down{
-  rotate: -20deg;
-  transform: translateY(-4px);
+  rotate: -25deg;
+  transform: translate(1px,-4px);
 }
 
 .left{
@@ -319,11 +316,19 @@ svg:hover .line3 {
   border-radius: 30px;
   font-weight: 700;
   background-color: #6d6d6d;
+  transition: all 400ms;
+  cursor: none;
+}
+
+.skill_card:hover{
+    background-color: #ffffff;
+    color: rgb(24, 24, 24);
 }
 
 .skill_container{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   align-items: center;
@@ -332,4 +337,58 @@ svg:hover .line3 {
 .skill_container h1{
   text-decoration: underline;
   text-align: center;
+  margin-top: 20px;
+}
+
+.project_card{
+  background-color: #6d6d6d;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.project_image{
+  height: 100px;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.navigation_aniimation{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #151515;
+  z-index: 50;
+  transition: all 400ms;
+}
+.navigation_aniimation2{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #900baa;
+  z-index: 49;
+  transition: all 400ms;
+  transition-delay: 200ms;
+}
+.navigation_aniimation3{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #151515; */
+  background-color: #0f4296;
+  z-index: 48;
+  transition: all 400ms;
+  transition-delay: 400ms;
+}
+
+.navigation_aniimation[isloaded="true"]{
+  width: 0px;
+}
+.navigation_aniimation2[isloaded="true"]{
+  width: 0px;
+}
+.navigation_aniimation3[isloaded="true"]{
+  width: 0px;
 }

@@ -6,6 +6,12 @@ import { useState } from "react";
 export default function Sidenav() {
    const [height, setHeight] = useState("-100vw");
    const [area, setArea] = useState("false");
+
+   const linkClick = () => {
+        setHeight("-100vw");
+        setArea("false")
+   }
+
   return (<>
     <div onClick={() => {
 
@@ -20,22 +26,22 @@ export default function Sidenav() {
 </svg>
     </div>
     <div className="sidenav" style={{ marginLeft: height}}> 
-        <Link className="nextlink" href={'/'}>
+        <Link onClick={linkClick} className="nextlink" href={'/'}>
           <div className="nav_item">
              <div> Home </div>
           </div>
         </Link>
-        <Link className="nextlink" href={'/about'}>
+        <Link onClick={linkClick} className="nextlink" href={'/about'}>
           <div className="nav_item">
              <div> About </div>
           </div>
         </Link>
-        <Link className="nextlink" href={'/contact'}>
+        <Link onClick={linkClick} className="nextlink" href={'/contact'}>
           <div className="nav_item">
              <div> Contact </div>
           </div>
         </Link>
-        <Link className="nextlink" href={'/projects'}>
+        <Link onClick={linkClick} className="nextlink" href={'/projects'}>
           <div className="nav_item">
              <div> Projects </div>
           </div>
