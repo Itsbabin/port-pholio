@@ -12,6 +12,10 @@ export default function Skills() {
     "HTML5",
     "Flutter",
     "Mongo DB",
+    "Docker",
+    "Next JS",
+    "Bootstrap",
+    "Node JS"
   ];
   return (
     <>

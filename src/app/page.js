@@ -1,7 +1,7 @@
 "use client";
 import Sidenav from "../component/sidenav";
 import Image from "next/image";
-import myphoto from "../../public/photos/myphoto.png";
+import myphoto from "../../public/photos/newphoto.jpg";
 import Animation from "@/component/animation";
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
           <div className="intro">
             <h1 className="heading">Hello !!</h1>
             <h3>
-              Lets dive into world of webedev with me . My shelf Biswajit Mandal
+              Lets dive into world of webe development with me . My shelf Biswajit Mandal ,
               a intermidiate webdeveloper.
             </h3>
           </div>

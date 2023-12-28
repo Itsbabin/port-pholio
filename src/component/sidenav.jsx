@@ -31,6 +31,11 @@ export default function Sidenav() {
              <div> Home </div>
           </div>
         </Link>
+        <Link onClick={linkClick} className="nextlink" href={'/skills'}>
+          <div className="nav_item">
+             <div> Skills </div>
+          </div>
+        </Link>
         <Link onClick={linkClick} className="nextlink" href={'/about'}>
           <div className="nav_item">
              <div> About </div>
