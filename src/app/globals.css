@@ -235,7 +235,7 @@ svg:hover .line3 {
 }
 .left:hover .navigate{
   transform: translate(-20px,30px);
-  width: 90px;
+  width: 65px;
 
 }
 
@@ -257,7 +257,7 @@ svg:hover .line3 {
   rotate: 30deg;
 }
 .left:hover .down{
-  transform: translate(-1px,0px);
+  transform: translate(-1px,1px);
   rotate: -30deg;
 } 
 .right .up{
@@ -287,7 +287,7 @@ svg:hover .line3 {
 }
 .right:hover .navigate{
   transform: translate(10px,27px);
-  width: 90px;
+  width: 65px;
 
 }
 
