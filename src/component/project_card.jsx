@@ -6,7 +6,7 @@ export default function Card({project}) {
     <>
         <div className="project_card">
             <div className="project_image"> 
-              <Image src={project.image} width={180} height={100} ></Image>            
+              <Image src={project.image} width={180} height={100} alt="image" ></Image>            
              </div>
             <Link className="project_link" href={project.link}>
             <div className="project_text">

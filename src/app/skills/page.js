@@ -5,17 +5,28 @@ import Animation from "@/component/animation";
 
 export default function Skills() {
   const list = [
-    "Java Script",
-    "C++",
-    "React",
-    "Css",
-    "HTML5",
-    "Flutter",
-    "Mongo DB",
-    "Docker",
-    "Next JS",
-    "Bootstrap",
-    "Node JS"
+    {id:0,
+      data:"Java Script"},
+    {id:1,
+      data:"C++"},
+    {id:2,
+      data:"React"},
+    {id:3,
+      data:"Css"},
+    {id:4,
+      data:"HTML5"},
+    {id:5,
+      data:"Flutter"},
+    {id:6,
+      data:"Mongo DB"},
+    {id:7,
+      data:"Docker"},
+    {id:8,
+      data:"Next JS"},
+    {id:9,
+      data:"Bootstrap"},
+    {id:10,
+      data:"Node JS"},
   ];
   return (
     <>
@@ -26,7 +37,7 @@ export default function Skills() {
             <h1>Skills</h1>
         <div className="wraper_skill">
           {list.map((e) => {
-            return <Card name={e} />;
+            return <Card key={e.id} name={e.data} />;
           })}
         </div>
         </div>
