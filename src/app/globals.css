@@ -217,51 +217,85 @@ svg:hover .line3 {
 
 .left , .right {
   height: 60px;
-  width: 60px;
   position: absolute;
   stroke: #ffffff91;
   margin: 48vh 0px;
-  opacity: 0.8;
-  cursor: pointer;
+  opacity: 1;
+  display: flex;
 }
+
+.navigate{
+  color: #ffffff;
+  height: 40px;
+  width: 0px;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 500;
+}
+
+.left .navigate{
+  transform: translate(-50px,27px);
+  transition: all 400ms;
+}
+.left:hover .navigate{
+  transform: translate(-20px,27px);
+  width: 90px;
+
+}
+
 
 .right{
   right: 20px;
 }
 
-.left::after{
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 25px;
-  color: #ffffff;
-  text-align: center;
-  transform: translate(0px,-45px);
-  transition: all 400ms;
-}
-
-.left:hover::after{
-  content: "content";
-  transform: translate(40px,-45px);
-  width: 70px;
-}
-
 .left .up{
   transition: all 400ms;
+  transform-origin: left;
 }
 .left .down{
   transition: all 400ms;
+  transform-origin: left;
 }
 .left:hover .up{
-  transform-origin: left;
   rotate: 20deg;
 }
 .left:hover .down{
   transform: translateY(1px);
-  transform-origin: left;
   rotate: -20deg;
+}
+.right .up{
+  transform-origin: right;
+  transition: all 400ms;
+}
+.right:hover .up{
+  rotate: 20deg;
+  transform: translateY(4px);
+}
+.right .down{
+  transition: all 400ms;
+  transform-origin: right;
+}
+.right:hover .down{
+  rotate: -20deg;
+  transform: translateY(-4px);
 }
 
 .left{
   left: 20px;
+}
+
+.right .navigate{
+  transform: translate(40px,27px);
+  transition: all 400ms;
+}
+.right:hover .navigate{
+  transform: translate(10px,27px);
+  width: 90px;
+
+}
+
+@media only screen and (max-width: 580px){
+  .right , .left{
+    display: none;
+  }
 }
